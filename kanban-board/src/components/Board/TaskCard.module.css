@@ -1,0 +1,45 @@
+.cardRoot {
+  background: linear-gradient(180deg,#fff,#fafafa);
+  border-radius: 8px;
+  padding: 10px;
+  box-shadow: 0 6px 18px rgba(2,6,23,0.06);
+  transition: transform .16s ease, box-shadow .16s ease;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+.cardRoot:hover { transform: translateY(-4px) scale(1.01); box-shadow: 0 12px 34px rgba(2,6,23,0.12); }
+
+.cardTop { display:flex; align-items:center; justify-content:space-between; gap:8px }
+.left { display:flex; gap:8px; align-items:center }
+.avatar {
+  width:34px; height:34px; border-radius:9999px; display:flex; align-items:center; justify-content:center; font-weight:700; color:#0b1220; background:#e6eef6;
+}
+.meta { display:flex; flex-direction:column }
+.title { font-size:16px; font-weight:700; line-height:1.15; margin:0 }
+.desc { font-size:14px; color:#475569; margin:0; display:-webkit-box; -webkit-line-clamp:2; -webkit-box-orient:vertical; overflow:hidden; text-overflow:ellipsis }
+
+.priority { font-size:12px; padding:4px 8px; border-radius:9999px; text-transform:capitalize; }
+.priority[data-p='high'] { background:#fecaca; color:#7f1d1d }
+.priority[data-p='medium'] { background:#fde68a; color:#78350f }
+.priority[data-p='low'] { background:#bbf7d0; color:#064e3b }
+
+.footer { display:flex; justify-content:space-between; align-items:center; gap:8px }
+.due { font-size:12px; color:#64748b }
+
+.controls { display:flex; gap:6px; opacity:0; transform: translateY(-4px); transition: all .12s ease }
+.cardRoot:hover .controls { opacity:1; transform: translateY(0) }
+.iconBtn { background:transparent; border:none; cursor:pointer; padding:6px; border-radius:6px }
+.iconBtn:hover { background:rgba(2,6,23,0.06) }
+
+.editForm { display:flex; flex-direction:column; gap:8px }
+.input { padding:8px; border-radius:6px; border:1px solid rgba(2,6,23,0.06); font-size:14px }
+.actions { display:flex; gap:8px; justify-content:flex-end }
+.btn { padding:6px 10px; border-radius:6px; border:none; cursor:pointer }
+.btnPrimary { background:#111827; color:white }
+.btnGhost { background:transparent }
+
+@media (max-width: 520px) {
+  .title { font-size:15px }
+  .desc { font-size:13px }
+}

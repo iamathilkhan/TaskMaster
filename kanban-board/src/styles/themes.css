@@ -1,0 +1,3 @@
+/* Theme helper placeholder */
+.theme-light { --bg: var(--color-bg); --text: var(--color-text) }
+.theme-dark { --bg: #0b1220; --text: #e6eef6 }
