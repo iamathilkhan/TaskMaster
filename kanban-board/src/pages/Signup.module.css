@@ -1,0 +1,13 @@
+.page { display:flex; align-items:center; justify-content:center; min-height:70vh; padding:20px }
+.card { width:100%; max-width:520px; background:#fff; border-radius:12px; padding:20px; box-shadow:0 10px 30px rgba(2,6,23,0.08) }
+.title { font-size:1.4rem; margin:0 0 6px 0 }
+.subtitle { color:#64748b; font-size:13px; margin-bottom:14px }
+.field { display:flex; flex-direction:column; gap:6px; margin-bottom:12px }
+.label { font-weight:600; font-size:13px }
+.input { padding:10px 12px; border-radius:8px; border:1px solid rgba(2,6,23,0.06); font-size:14px }
+.actions { display:flex; justify-content:space-between; align-items:center; gap:8px }
+.btn { padding:10px 14px; border-radius:8px; border:none; background:#111827; color:white; cursor:pointer }
+.error { background:#fee2e2; color:#991b1b; padding:8px; border-radius:6px; margin-bottom:12px }
+.helper { font-size:13px; color:#94a3b8 }
+
+@media (max-width:520px) { .card { padding:12px } .title { font-size:1.25rem } }

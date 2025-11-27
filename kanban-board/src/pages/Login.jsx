@@ -1,7 +1,7 @@
 import React, { useState } from 'react'
 import { useNavigate, Link } from 'react-router-dom'
 import PropTypes from 'prop-types'
-import api from '../services/api'
+import api, { setAuthToken } from '../services/api'
 import styles from './Login.module.css'
 
 export default function Login({ onLoginSuccess }) {
@@ -40,6 +40,13 @@ export default function Login({ onLoginSuccess }) {
 
       // call optional handler
       if (onLoginSuccess) onLoginSuccess(data)
+
+      // persist token and set default auth header for subsequent requests
+      const token = data?.token || data?.auth?.token
+      if (token) {
+        localStorage.setItem('authToken', token)
+        setAuthToken(token)
+      }
 
       // navigate to dashboard on success
       nav('/dashboard')

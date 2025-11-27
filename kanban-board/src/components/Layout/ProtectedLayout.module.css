@@ -1,0 +1,9 @@
+.wrapper { min-height:100vh; display:flex; flex-direction:column }
+.inner { display:flex; gap:16px; padding:18px; max-width:1400px; margin:0 auto; width:100% }
+.sidebar { flex: 0 0 220px }
+.main { flex:1; background:transparent }
+
+@media (max-width:900px) {
+  .inner { flex-direction:column; padding:12px }
+  .sidebar { order:2; width:100%; flex:unset }
+}
